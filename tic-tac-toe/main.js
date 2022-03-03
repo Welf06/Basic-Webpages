@@ -75,6 +75,7 @@ function result(){
          game = ['', '', '',
             '', '', '',
             '', '', '',];
+            count = 0;
          break;
       }
 
@@ -87,6 +88,7 @@ function result(){
          game = ['', '', '',
             '', '', '',
             '', '', '',];
+            count= 0;
          return;
       }
 
