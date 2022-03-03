@@ -164,6 +164,31 @@ h3{
    .row .hover{
       background-color: #ffffff;
    }
+   .start{
+      margin-right: 0;
+   }
+
+   .row{
+      margin-right: 0;
+   }
+
+   .row button{
+      width: 75px;
+      height: 75px;
+      padding: 19px;
+      font-size: 2rem;
+   }
+
+   h3{
+      font-size: 2rem;
+      text-align: center;
+      margin: auto;
+      transition: 1s ease-in-out;
+   }
+   .padding{
+      padding: 80px;
+      transition: 1s ease-in-out;
+   }
 }
 
 @media (max-width: 460px) {
@@ -172,5 +197,20 @@ h3{
    }
    .start{
       font-size: 1.5rem;
+   }
+
+   h3{
+      font-size: 1.5rem;
+      text-align: center;
+      margin: auto;
+      transition: 1s ease-in-out;
+      padding: 20px;
+   }
+
+   .row button{
+      width: 50px;
+      height: 50px;
+      padding: 14px;
+      font-size: 1.5rem;  
    }
 }
