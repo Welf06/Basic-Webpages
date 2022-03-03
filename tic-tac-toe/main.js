@@ -19,9 +19,9 @@ function hide(n) {
    message.innerHTML = `Congratulations Player ${n}! `
 } 
 
-let game = ['', '', '',
+var game = ['', '', '',
             '', '', '',
-            '', '', '',]
+            '', '', '',];
 
 const winningConditions = [
                [0, 1, 2],
@@ -72,6 +72,9 @@ function result(){
          flag = 0;
          var playerWon =  Number(a) ;
          hide(playerWon);
+         game = ['', '', '',
+            '', '', '',
+            '', '', '',];
          break;
       }
 
@@ -81,6 +84,9 @@ function result(){
          console.log("draw");
          setTimeout(hide, 1000);
          hide(0);
+         game = ['', '', '',
+            '', '', '',
+            '', '', '',];
          return;
       }
 
