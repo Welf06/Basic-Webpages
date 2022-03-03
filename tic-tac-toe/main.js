@@ -4,14 +4,18 @@ const message = document.querySelector('#msg')
 function hide(n) {
    const hide = document.querySelector('.grid');
    hide.classList.add('hidden');
-   message.style.padding = '80px';
+   padding();
+   
    if (n===1){
+      message.classList.remove('blue', 'red');
       message.classList.add('red');
    }
    else if (n===2){
+      message.classList.remove('red', 'blue');
       message.classList.add('blue');
    }
    else{
+      message.classList.remove('red', 'blue');
       message.innerHTML = `IT'S A DRAW `;
       return
    }
@@ -19,6 +23,18 @@ function hide(n) {
    message.innerHTML = `Congratulations Player ${n}! `
 } 
 
+
+function padding(){
+   message.style.padding = '80px';
+   var x = window.matchMedia("(max-width: 648px)");
+   if (x.matches) { // If media query matches
+      message.style.padding = '70px';
+    }
+   var x = window.matchMedia("(max-width: 460px)");
+   if (x.matches) { // If media query matches
+      message.style.padding = '65px';
+    }
+}
 var game = ['', '', '',
             '', '', '',
             '', '', '',];
@@ -53,7 +69,6 @@ function start() {
    playerTurn.classList.add('red');
    document.querySelector('.grid').classList.remove('hidden');
    message.innerHTML = ``;
-   message.classList.remove('red', 'blue');
    message.style.padding = '0px'
    }
 }
@@ -102,9 +117,10 @@ document.querySelectorAll('.button').forEach(item => {
       if (flag === 1 && item.innerHTML === ''){
          if (count%2===0){
             playerTurn.innerHTML = "Player 1"
-            playerTurn.classList.remove('blue');
+            playerTurn.classList.remove('blue', 'red');
             playerTurn.classList.add('red');
             item.innerHTML = "X";
+            item.classList.remove('red' , 'blue');
             item.classList.add('red');
             game[item.id[7] - 1] = '1';
             console.log(game);
@@ -112,9 +128,10 @@ document.querySelectorAll('.button').forEach(item => {
          
          else if (count%2===1){
             playerTurn.innerHTML = "Player 2"
-            playerTurn.classList.remove('red');
+            playerTurn.classList.remove('red', 'blue');
             playerTurn.classList.add('blue');
             item.innerHTML = "O";
+            item.classList.remove('red' , 'blue');
             item.classList.add('blue');
             game[item.id[7] - 1] = '2';
          }
