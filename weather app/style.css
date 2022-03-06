@@ -46,7 +46,7 @@ body{
 
 
 .input{
-   background-color: hsla(235, 62%, 73%, 0.5);
+   background-color: hsla(235, 62%, 73%, 0.7);
    font-size: 2rem;
    font-weight: 600;
    max-width: 360px;
@@ -61,7 +61,7 @@ body{
 }
 
 .input:hover{
-   background-color: hsla(235, 62%, 73%, 0.7);
+   background-color: hsla(235, 62%, 73%, 0.9);
    transition: 0.2s ease-in-out;
 }
 .input:focus{
