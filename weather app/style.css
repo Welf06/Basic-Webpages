@@ -49,6 +49,7 @@ body{
    background-color: hsla(235, 62%, 73%, 0.5);
    font-size: 2rem;
    font-weight: 600;
+   max-width: 360px;
    padding: 10px;
    text-align: center;
    margin-top: 40px;
@@ -99,4 +100,11 @@ body{
    transition: 0.4s ease-in-out;
    padding-bottom: 15px;
    font-weight: 500;
+}
+
+@media (max-width: 500px){
+   .input{
+      max-width: 200px;
+      font-size: 1rem;
+   }
 }
