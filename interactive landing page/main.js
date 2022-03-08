@@ -29,16 +29,24 @@ function setBGreeting() {
 
    if (hour <12 && hour > 5){
       document.body.style.background = "url('morning.jpg')"
+      document.body.style.backgroundRepeat = "no-repeat"
+      document.body.style.backgroundSize = "cover"
       greeting.textContent = 'Good Morning'
    }
-   else if (hour < 16){
+   else if (hour < 16 && hour > 5){
       document.body.style.background = "url('afternoon.jpg')"
+      document.body.style.backgroundRepeat = "no-repeat"
+      document.body.style.backgroundSize = "cover"
+
       greeting.textContent = 'Good Afternoon'
 
    }
 
-   else if (hour < 20){
+   else if (hour < 20 && hour > 5){
       document.body.style.background = "url('evening.jpg')"
+      document.body.style.backgroundRepeat = "no-repeat"
+      document.body.style.backgroundSize = "cover"
+      document.body.style.color = '#ffffff'
       greeting.textContent = 'Good Evening'
 
    }
@@ -46,6 +54,8 @@ function setBGreeting() {
    else{
       document.body.style.background = "url('night.jpg')"
       greeting.textContent = 'Good Night'
+      document.body.style.backgroundRepeat = "no-repeat"
+      document.body.style.backgroundSize = "cover"
       document.body.style.color = '#ffffff'
    }
 }
