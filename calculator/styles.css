@@ -1,0 +1,70 @@
+*, *::after, *::before {
+   box-sizing: border-box;
+   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   font-weight: 600;
+   padding: 0;
+   margin: 0;
+}
+
+body{
+   background-color: #141414;
+   min-height: 100vh;
+
+}
+
+.grid{
+   display: grid;
+   justify-content: center;
+   align-content: center;
+   min-height: 100vh;
+   grid-template-columns: repeat(4, 100px);
+   grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+   gap: .2rem;
+}
+
+.grid > button{
+   font-size: 1.8rem;
+   border: 1px #000000 solid;
+   cursor: pointer;
+   padding: 10px;
+   outline: 0;
+   border-radius: 2px;
+}
+
+.grid > button:hover{
+   font-weight: bold;
+   font-size: 2rem;
+   transition: 0.1s ease-in-out;
+   background-color: #ffffff;
+}
+
+.col-2{
+   grid-column: span 2;
+}
+
+.output{
+   color: #000000;
+   grid-column: 1/-1;
+   background-color: rgba(238, 238, 238, 1);
+   display: flex;
+   align-items: flex-end;
+   justify-content: space-around;
+   flex-direction: column;
+   padding: 10px;
+   word-wrap: break-word;
+   word-break: break-all;
+   transition: 0.5s ease-in-out;
+   border-radius: 2px;
+}
+
+.output .previous {
+   font-size: 1.5rem;
+   color: rgba(0, 0, 0, 0.75);
+   transition: 0.5s ease-in-out;
+}
+
+.output .current {
+   font-size: 2.5rem;
+   color: rgb(0, 0, 0);
+   transition: 1s ease-in-out;
+}
