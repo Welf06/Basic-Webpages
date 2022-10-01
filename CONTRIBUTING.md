@@ -64,4 +64,4 @@ Once you submit your PR, we will review your proposal. We may ask questions or r
 
 Congratulations :tada::tada:  Thank you :sparkles:. 
 
-Once your PR is merged, your contributions will be publicly visible on the [bsic webpages](https://basic-webpages.vercel.app/). 
+Once your PR is merged, your contributions will be publicly visible on the [basic webpages](https://basic-webpages.vercel.app/). 
