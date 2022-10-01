@@ -76,9 +76,15 @@ git pull
 
 ## Contributing
 
-<p>Please let us know if you encounter a bug by filing an <a href="https://github.com/Welf06/Basic-Webpages/issues">issue.</a> We appreciate all contributions. If you are planning to contribute back bug-fixes, please claim the issue in the issues tab. If you plan to contribute new features, utility functions, or extensions to the core, please first open an issue and discuss the feature with us. Sending a PR without discussion might end up resulting in a rejected PR because we might be taking the core in a different direction than you might be aware of. To learn more about making a contribution to Basic Web-Pages, please see our <a href="https://github.com/Welf06/Basic-Webpages/blob/main/CONTRIBUTING.md">Contribution page</a></p>
+
+- Please let us know if you encounter a bug by filing an <a href="https://github.com/Welf06/Basic-Webpages/issues">issue.</a> 
+- We appreciate all contributions. 
+- If you are planning to contribute back bug-fixes, please claim the issue in the issues tab. 
+- If you plan to contribute new features, utility functions, or extensions to the core, please first open an issue and discuss the feature with us. 
+- Sending a PR without discussion might end up resulting in a rejected PR because we might be taking the core in a different direction than you might be aware of. 
+- To learn more about making a contribution to Basic Web-Pages, please see our <a href="https://github.com/Welf06/Basic-Webpages/blob/main/CONTRIBUTING.md">Contribution page</a>
 
 
 ## License
 
-AutoJoomer is distributed under the Apache 2.0 license
+Basic Webpages is distributed under the Apache 2.0 license
