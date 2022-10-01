@@ -1,10 +1,17 @@
 
-var b = prompt(" enter a random number ")
-var a = Math.floor(Math.random()*9 + 1)
+var a =document.querySelector(".b").value;
 
 
-if ( a === b){
-  alert(" congratulations u have guessed the number currenty")
-}else{
-  alert(" Incorrect --> try again")
+
+var b  = Math.floor(Math.random()*99 +1);
+
+
+document.querySelector(".a").addEventListener("click",handleClick());
+
+function handleClick(){
+  if(a===b){
+    alert(" Congratulations!!you have guessed the number"+a+"successfully");
+  }else{
+    alert(" you have guessed the number incorrectly try again");
+  }
 }
