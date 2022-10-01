@@ -10,7 +10,7 @@
   
 
 ### Introduction: <br>
-Basic-WebPages is an Open Source project which is accepted by hactoberfest also. It contains many projects. Our target is to teach how open source works and how to contribute in it. And we contributer can also practice JAVASCRIPT. We welcome anyone who is interested and want to contribute in our project.
+Basic-Web-Pages is an Open Source project that is a part of Hacktoberfest 2022. In it, you can find simple HTML, CSS, and JavaScript web development projects. Our goal is to create a repository of beautifully designed simple websites that can serve as a reference for those just getting started with Web Development. Compared to other complex projects, our repository is also a great place for people to start their Open Source journey. Anyone interested in contributing to our project is welcome.
 
   <hr>
   <p align="center">
