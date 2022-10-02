@@ -1,20 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Basic Web Pages</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic WebTools ❄️</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+<meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="./style.css">
+
 </head>
 <body>
+<!-- partial:index.partial.html -->
+<!-- Canvas -->
+<canvas class="orb-canvas"></canvas>
+<!-- Overlay -->
+<div class="overlay">
+  <!-- Overlay inner wrapper -->
+  <div class="overlay__inner">
+    <!-- Title -->
+    <h1 class="overlay__title">
+      Hey, Developers...
+      
+      <p class="overlay_title">
+        This website is presentation of</p> 
+      <span class="text-gradient">BASIC WEB-TOOLS</span>
+    </h1>
+    
+    <!-- Description -->
+    <p class="overlay__description">
+      In this tutorial we will be creating a generative “orb” animation
+      using pixi.js, picking some lovely random colors and pulling it all
+      together in a nice frosty UI.
+      <strong>We're gonna talk accessibility, too.</strong>
+    </p>
+    <div  class="container">
+      <div class="cat">
+          <div class="face">
+              <div class="ear-l">
+                  <div class="inner-l"></div>
+              </div>
+              <div class="ear-r">
+                  <div class="inner-r"></div>
+              </div>
+              <div class="eye-l">
+                  <div class="eyeball" id="eyeball-l"></div>
+              </div>
+              <div class="eye-r">
+                  <div class="eyeball" id="eyeball-r"></div>
+              </div>
+              <div class="nose">
+                  <div class="l1"></div>
+                  <div class="l2"></div>
+              </div>
+          </div>
+          <div class="body">
+              <div class="paw-l"></div>
+              <div class="paw-r"></div>
+              <div class="tail"></div>
+          </div>
+          <div class="shadow"></div>
+      </div>
+  </div>
+    <!-- Buttons -->
+    <div class="overlay__btns">
 
-   <main class="links">
-      <a href="prime number checker/index.html">Prime or Composite</a> <br>
-      <a href="tic-tac-toe/index.html">Tic-Tac-Toe</a> <br>
-      <a href="weather app/index.html">Weather App</a> <br>
-      <a href="calculator/index.html">Calculator</a> <br>
-      <a href="interactive landing page/index.html">Interactive Landing Page</a> <br>
-      <a href="faq page/index.html">FAQ Page</a> <br>
-   </main>
+      <button class="overlay__btn overlay__btn--transparent">
+        <a target="_self" href="tools.html">
+
+          View Tools
+        </a>
+      </button>
+
+      <button onclick="window.location.href='about.html';" class="overlay__btn overlay__btn--colors">
+        <span>About Us</span>
+        <span target="about.html" class="overlay__btn-emoji">🎨</span>
+      </button>
+    </div>
+  </div>
+</div>
+<!-- partial -->
+  <script type="module" src="./script.js"></script>
+
 </body>
 </html>
