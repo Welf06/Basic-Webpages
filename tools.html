@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic WebTools ❄️</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+<meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="./style.css">
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Heebo:400,700|Open+Sans:400,700');
+
+:root {
+  --color: #3c3163;
+  --transition-time: 0.5s;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Open Sans';
+  background: #fafafa;
+}
+
+a {
+  color: inherit;
+}
+
+.cards-wrapper {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 4rem;
+  padding: 4rem;
+  margin: 0 auto;
+  width: max-content;
+}
+
+.card {
+  font-family: 'Heebo';
+  --bg-filter-opacity: 0.5;
+  background-image: linear-gradient(rgba(0,0,0,var(--bg-filter-opacity)),rgba(0,0,0,var(--bg-filter-opacity))), var(--bg-img);
+  height: 20em;
+  width: 15em;
+  font-size: 1.5em;
+  color: white;
+  border-radius: 1em;
+  padding: 1em;
+  /*margin: 2em;*/
+  display: flex;
+  align-items: flex-end;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 5em -1em black;
+  transition: all, var(--transition-time);
+  position: relative;
+  overflow: hidden;
+  border: 10px solid #ccc;
+  text-decoration: none;
+}
+
+.card:hover {
+  transform: rotate(0);
+}
+
+.card h1 {
+  margin: 0;
+  font-size: 1.5em;
+  line-height: 1.2em;
+}
+
+.card p {
+  font-size: 0.75em;
+  font-family: 'Open Sans';
+  margin-top: 0.5em;
+  line-height: 2em;
+}
+
+.card .tags {
+  display: flex;
+}
+
+.card .tags .tag {
+  font-size: 0.75em;
+  background: rgba(255,255,255,0.5);
+  border-radius: 0.3rem;
+  padding: 0 0.5em;
+  margin-right: 0.5em;
+  line-height: 1.5em;
+  transition: all, var(--transition-time);
+}
+
+.card:hover .tags .tag {
+  background: var(--color);
+  color: white;
+}
+
+.card .date {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 0.75em;
+  padding: 1em;
+  line-height: 1em;
+  opacity: .8;
+}
+
+.card:before, .card:after {
+  content: '';
+  transform: scale(0);
+  transform-origin: top left;
+  border-radius: 50%;
+  position: absolute;
+  left: -50%;
+  top: -50%;
+  z-index: -5;
+  transition: all, var(--transition-time);
+  transition-timing-function: ease-in-out;
+}
+
+.card:before {
+  background: #ddd;
+  width: 250%;
+  height: 250%;
+}
+
+.card:after {
+  background: white;
+  width: 200%;
+  height: 200%;
+}
+
+.card:hover {
+  color: var(--color);
+}
+
+.card:hover:before, .card:hover:after {
+  transform: scale(1);
+}
+
+.card-grid-space .num {
+  font-size: 3em;
+  margin-bottom: 1.2rem;
+  margin-left: 1rem;
+}
+
+.info {
+  font-size: 1.2em;
+  display: flex;
+  padding: 1em 3em;
+  height: 3em;
+}
+
+.info img {
+  height: 3em;
+  margin-right: 0.5em;
+}
+
+.info h1 {
+  font-size: 1em;
+  font-weight: normal;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1285px) {
+  .cards-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .cards-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .info {
+    justify-content: center;
+  }
+  .card-grid-space .num {
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .cards-wrapper {
+    padding: 4rem 2rem;
+  }
+  .card {
+    max-width: calc(100vw - 4rem);
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .info {
+    display: block;
+    text-align: center;
+  }
+  .info h1 {
+    margin: 0;
+  }
+}
+</style>
+</head>
+
+<canvas class="orb-canvas"></canvas>
+
+<section class="cards-wrapper">
+    <div class="card-grid-space">
+      <div class="num">01</div>
+      <a class="card" href="#" style="--bg-img: url(https://images.unsplash.com/photo-1582572186057-0e74d3c715ea?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=327&q=80)">
+        <div>
+          <h1>Calculator</h1>
+          <p>Simple calculator using HTML and CSS</p>
+          <div class="date">2 Oct 2022</div>
+          <div class="tags">
+            <div class="tag">Web view</div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="card-grid-space">
+      <div class="num">02</div>
+      <a class="card" href="#" style="--bg-img: url('https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&resize_w=1500&url=https://codetheweb.blog/assets/img/posts/basic-types-of-html-tags/cover.jpg')">
+        <div>
+          <h1>Faq page</h1>
+          <p>Faq page using html and css</p>
+          <div class="date">1 Oct 2022</div>
+          <div class="tags">
+            <div class="tag">Web view</div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="card-grid-space">
+      <div class="num">03</div>
+      <a class="card" href="#" style="--bg-img: url('https://images.unsplash.com/photo-1503416997304-7f8bf166c121?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80')">
+        <div>
+          <h1>Landing page</h1>
+          <p>Interactive UI landing page</p>
+          <div class="date">28 Sep 2022</div>
+          <div class="tags">
+            <div class="tag">Web view</div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="card-grid-space">
+      <div class="num">04</div>
+      <a class="card" href="#" style="--bg-img: url('https://img.freepik.com/free-photo/tic-tac-toe-game-with-red-ornament-hearts_23-2148024598.jpg?w=740&t=st=1664720612~exp=1664721212~hmac=b633915695ae7e84e8db3272b456ac51340ca66a12ffdc62aacc21e4730774d7')">
+        <div>
+          <h1>Tic toe toc</h1>
+          <p>Tic toe toc game in html</p>
+          <div class="date">4 Oct 2022</div>
+          <div class="tags">
+            <div class="tag">Web view</div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <style>
+      .footer {
+        position:fixed;
+        bottom:0;
+        width:100%;
+        text-align: center;
+      }
+      </style>
+      <footer>
+      
+        <div class="footer">
+          <a href="index.html" class="button">Back to Home</a>
+        </div>
+      </footer>
+<script type="module" src="./script.js"></script>
+</body>
+</html>
