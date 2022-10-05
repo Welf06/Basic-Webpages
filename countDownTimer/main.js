@@ -12,7 +12,7 @@
     
     //Replace the code with your product LaunchDay
     //Make sure that your launchDay is ahead than currentDay
-    launchDay = "10/5/2022";
+    launchDay = "12/31/2022";
     
     today = mm + "/" + dd + "/" + yyyy;
    
