@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>MY CALENDAR</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="calendar">
+
+        <div class="header">
+            <button class="arrow prev">&#60;</button>
+            <h2 id="headingtwo"></h2>
+            <h3 id="headingthree"></h3>
+            <button class="arrow next">&#62;</button>
+        </div>
+        <div class="weekdays" id="lc">
+            <div class="day">Sun</div>
+            <div class="day">Mon</div>
+            <div class="day">Tue</div>
+            <div class="day">Wed</div>
+            <div class="day">Thu</div>
+            <div class="day">Fri</div>
+            <div class="day">Sat</div>
+        </div>
+        <div class="dates">
+            <div class="r">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="r">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="r">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="r">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="r">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="r">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const d = new Date();
+        const renderCalendar = () => {
+            var h2 = document.getElementById('headingtwo');
+            var h3 = document.getElementById('headingthree');
+            var monthArr = [
+                "January",
+                "February",
+                "March",
+                "April",
+                "May",
+                "June",
+                "July",
+                "August",
+                "September",
+                "October",
+                "November",
+                "December",
+            ];
+            var day31MonthArr = [
+                "January",
+                "March",
+                "May",
+                "July",
+                "August",
+                "October",
+                "December"
+            ];
+
+
+            var obj = getDate();
+            function getDate() {
+                var month = d.getMonth();
+                month = monthArr[month];
+                var date = d.getDate();
+                var year = d.getFullYear();
+
+                h2.innerHTML = month;
+                h3.innerHTML = `${year}`;
+
+                return { m: month, dt: date, yr: year };
+            }
+            console.log(d.getMonth());
+            generateCalendar();
+            function generateCalendar() {
+                var days;
+                if (obj.m === "February" && obj.yr % 4 !== 0) {
+                    days = 28;
+                } else if (obj.m === "February" && obj.yr % 4 === 0) {
+                    days = 29;
+                } else if (day31MonthArr.includes(obj.m)) {
+                    days = 31;
+                } else {
+                    days = 30;
+                }
+
+
+                var dfirst = new Date(d.getFullYear(), d.getMonth(), 1);
+                var dayIndex = dfirst.getDay();
+                var divs = document.querySelectorAll(".r div");
+                for (var j = 0; j < dayIndex; j++) {
+                    divs[j].innerHTML = ' ';
+                }
+                var dcurr = new Date();
+                console.log(dcurr.getMonth());
+                for (var k = dayIndex; k <= dayIndex + days - 1; k++) {
+                    divs[k].innerHTML = `${k - dayIndex + 1}`;
+                    divs[k].className = "date";
+                    if ((k - dayIndex + 1) === dcurr.getDate() && d.getMonth() === dcurr.getMonth() && d.getFullYear() === dcurr.getFullYear()) {
+                        divs[k].className = "date--curr";
+                    }
+                }
+            }
+        }
+        function reset() {
+            var divs = document.querySelectorAll(".r div");
+            console.log(divs);
+            for (var i = 0; i < 42; i++) {
+                divs[i].innerHTML = ' ';
+                divs[i].style = 'none';
+                divs[i].className = "date-empty";
+            }
+        }
+        document.querySelector(".prev").addEventListener("click", () => {
+            reset();
+            d.setMonth(d.getMonth() - 1);
+            renderCalendar();
+        });
+
+        document.querySelector(".next").addEventListener("click", () => {
+            reset();
+            d.setMonth(d.getMonth() + 1);
+            renderCalendar();
+        });
+
+        renderCalendar();
+    </script>
+</body>
+
+</html>
