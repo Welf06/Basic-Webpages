@@ -1,0 +1,63 @@
+body{
+  background-color: #FFD6EC;
+}
+
+
+h1{
+  text-decoration: underline;
+  color: black;
+  margin-left: 550px;
+  font-size: 3rem;
+}
+
+h3{
+  width: 500px;
+  display: inline;
+  font-size: 2rem;
+}
+
+li{
+  font-size: 1.5rem;
+}
+
+
+h2{
+  font-size: 4.5rem;
+  margin-left: 500px;
+
+}
+
+h4{
+  width: 500px;
+  text-decoration: underline;
+  margin-left: 500px;
+  font-size: 2rem;
+  display: inline;
+  margin-bottom: 500px;
+}
+
+.b{
+  width: 250px;
+  margin-left: 500px;
+  font-size: 1.5rem;
+  display: inline;
+}
+
+
+.a{
+  width: 100px;
+
+  margin-left: auto;
+  font-size: 1.5rem;
+  display: inline;
+}
+
+li{
+  display: inline;
+  width:800px;
+}
+
+ul{
+  display: inline;
+  width: 800px;
+}
